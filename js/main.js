@@ -1,6 +1,6 @@
 // Load komponen saat build: gunakan import.meta.glob agar Vite
 // menyertakan file HTML komponen ke dalam output build.
-const componentsMap = import.meta.glob('../components/*.html', { as: 'raw', eager: true });
+const componentsMap = import.meta.glob('../components/*.html', { query: '?raw', import: 'default', eager: true });
 
 function getComponentHtml(componentName) {
     const key = `../components/${componentName}.html`;
