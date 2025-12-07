@@ -14,7 +14,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "vite": "^7.2.6"
   }
 }
