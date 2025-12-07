@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci --legacy-peer-deps",
+  "devCommand": "npm run dev",
+  "framework": "vite",
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    }
+  }
+}
