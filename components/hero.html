@@ -1,41 +1,41 @@
 <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes gradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(-45deg, #FF6A3D, #FF8C42, #FFA500, #FF6A3D);
-            background-size: 300% 300%;
-            animation: gradient 8s ease infinite;
-        }
-        
-        .blob {
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation: blob 7s ease-in-out infinite;
-        }
-        
-        @keyframes blob {
-            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
-            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
-            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
-        }
-    </style>
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes gradient {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(-45deg, #FF6A3D, #FF8C42, #FFA500, #FF6A3D);
+        background-size: 300% 300%;
+        animation: gradient 8s ease infinite;
+    }
+    
+    .blob {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        animation: blob 7s ease-in-out infinite;
+    }
+    
+    @keyframes blob {
+        0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+        50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+        75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+    }
+</style>
 
 
 <section class="container mx-auto px-6 py-16 max-w-7xl min-h-screen flex items-center mt-[100px]">
     <div class="w-full max-w-6xl mx-auto">
-        <!-- Header Text -->
+
         <div class="text-center mb-16 lg:mb-20">
             <div class="items-center gap-2 justify-center w-max flex mx-auto mb-4">
                 <svg width="20" height="2" viewBox="0 0 30 2" xmlns="http://www.w3.org/2000/svg">
@@ -51,9 +51,9 @@
             <p class="text-gray-600 text-lg md:text-xl font-light">Full Stack Developer</p>
         </div>
 
-        <!-- Main Content Grid -->
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <!-- Left Caption -->
+
             <div class="lg:col-span-4 space-y-6">
                 <div class="p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
@@ -67,31 +67,32 @@
 
             </div>
 
-            <!-- Center Photo -->
+
             <div class="lg:col-span-4 flex justify-center">
                 <div class="relative group">
-                    <!-- Background Blob -->
+
                     <div class="absolute -inset-4 gradient-bg opacity-75 blur-2xl blob"></div>
                     
-                    <!-- Main Image Container -->
+
                     <div class="relative bg-white p-2 rounded-3xl shadow-2xl animate-float">
                         <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden">
-                            <!-- Placeholder untuk foto -->
+
                             <div class="w-full h-full flex items-center justify-center text-gray-400">
                                 <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
+
                         </div>
                     </div>
 
-                    <!-- Decorative Elements -->
+
                     <div class="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full opacity-20 blur-xl"></div>
                     <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-orange-600 rounded-full opacity-20 blur-xl"></div>
                 </div>
             </div>
 
-            <!-- Right Info -->
+
             <div class="lg:col-span-4 space-y-6">
                 <div class="p-6 flex flex-col gap-2 items-end">
                     <div class="flex flex-wrap gap-3">

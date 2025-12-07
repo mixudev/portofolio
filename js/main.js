@@ -7,6 +7,7 @@ const componentsMap = import.meta.glob('../components/*.html', {
 const componentsList = [
     'navbar',
     'hero',
+    'service',
     'about',
     'skills',
     'projects',
@@ -53,6 +54,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     await loadAllComponents();
     initializeComponents();
 });
+
+import { initializeServices } from './../assets/js/services.js';
 
 function initializeComponents() {
     let lastScrollTop = 0;
@@ -104,6 +107,9 @@ function initializeComponents() {
             mobileMenu.classList.remove('open');
         });
     });
+
+
+    initializeServices();
 
     console.log('Done!');
 }
