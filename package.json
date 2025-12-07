@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "node ./node_modules/vite/bin/vite.js build"
   },
   "keywords": [
     "portfolio",
@@ -16,6 +17,9 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^7.2.6"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "repository": {
     "type": "git",
