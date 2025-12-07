@@ -1,14 +1,170 @@
-<section id="home" class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Halo, Saya <span class="highlight">Lazuardi Mandegar</span></h1>
-            <h3>Web Developer</h3>
-            <p>Saya seorang web developer yang berfokus pada pengembangan aplikasi web modern menggunakan teknologi terdepan. Spesialisasi saya meliputi Laravel, Tailwind CSS, dan WordPress untuk menciptakan solusi web yang efisien dan user-friendly.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
-                <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+<style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(-45deg, #FF6A3D, #FF8C42, #FFA500, #FF6A3D);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+        }
+        
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob 7s ease-in-out infinite;
+        }
+        
+        @keyframes blob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+    </style>
+
+
+<section class="container mx-auto px-6 py-16 max-w-7xl min-h-screen flex items-center mt-[100px]">
+    <div class="w-full max-w-6xl mx-auto">
+        <!-- Header Text -->
+        <div class="text-center mb-16 lg:mb-20">
+            <div class="items-center gap-2 justify-center w-max flex mx-auto mb-6">
+                <svg width="30" height="2" viewBox="0 0 30 2" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="2" rx="1" fill="#FF6A3D"/>
+                </svg>
+                <p class="text-orange-500 font-medium tracking-wide">Hello There!</p>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
+                I'm <span class="text-orange-600 inline-block ">Lazuardi Mandegar</span>
+            </h1>
+
+            <p class="text-gray-600 text-lg md:text-xl font-light">Full Stack Developer</p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <!-- Left Caption -->
+            <div class="lg:col-span-4 space-y-6">
+                <div class="p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                    </svg>
+                    <p class="text-gray-600 leading-relaxed">
+                        Passionate developer crafting innovative digital solutions with clean code and modern technologies. Turning ideas into reality, one project at a time.
+                    </p>
+                </div>
+
+
+            </div>
+
+            <!-- Center Photo -->
+            <div class="lg:col-span-4 flex justify-center">
+                <div class="relative group">
+                    <!-- Background Blob -->
+                    <div class="absolute -inset-4 gradient-bg opacity-75 blur-2xl blob"></div>
+                    
+                    <!-- Main Image Container -->
+                    <div class="relative bg-white p-2 rounded-3xl shadow-2xl animate-float">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden">
+                            <!-- Placeholder untuk foto -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full opacity-20 blur-xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-orange-600 rounded-full opacity-20 blur-xl"></div>
+                </div>
+            </div>
+
+            <!-- Right Info -->
+            <div class="lg:col-span-4 space-y-6">
+                <div class="p-6 flex flex-col gap-2 items-end">
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-1.5 text-white rounded-full text-xs font-medium bg-black transition-colors">Prototype</span>
+                        <span class="px-4 py-1.5 text-white rounded-full text-xs font-medium bg-orange-500 transition-colors">Dashboard</span>           
+                    </div>
+                    <div class="flex flex-wrap gap-3 my-3">
+                        <span class="p-1.5 text-white rounded-full text-xs font-medium bg-orange-500 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                            </svg>
+                        </span>
+                        <span class="px-4 py-1.5 text-white rounded-full text-xs font-medium bg-black transition-colors">Web Aplication</span>           
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="px-4 py-1.5 text-white rounded-full text-xs font-medium bg-orange-500 transition-colors">UI/UX Design</span>
+                        <span class="px-4 py-1.5 text-white rounded-full text-xs font-medium bg-black transition-colors">Web Design</span>
+                    </div>
+                </div>
+
+                <div class="p-6 text-right">
+                    <h3 class="text-sm font-bold mb-4 text-gray-800">
+                        Follow Us :
+                    </h3>
+                    <div class="space-y-3 inline-flex flex-row gap-4 items-end">
+                        
+                        <div class="flex space-x-3">
+                        <!-- Linkedln -->
+                        <a href="#" class="social-icon group text-white w-11 h-11 rounded-full flex items-center justify-center border border-gray-400 hover:border-orange-600">
+                            <svg class="w-5 h-5 text-gray-700 group-hover:text-orange-600" fill="currentColor"  viewBox="0 0 24 24">
+                                <path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 
+                                2.8 2.2 5 5 5h14c2.8 0 5-2.2 
+                                5-5V5c0-2.8-2.2-5-5-5zM7.1 19H4V9h3.1v10zM5.5 
+                                7.8c-1 0-1.8-.8-1.8-1.8s.8-1.8 
+                                1.8-1.8c1 0 1.8.8 
+                                1.8 1.8s-.8 1.8-1.8 
+                                1.8zM20 19h-3.1v-5.4c0-3.2-4-3-4 
+                                0V19H9.8V9h3.1v1.7c1.4-2.5 
+                                7-2.7 7 2.4V19z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="#" class="social-icon group text-white w-11 h-11 rounded-full flex items-center justify-center border border-gray-400 hover:border-orange-600">
+                            <svg class="w-5 h-5 text-gray-700 group-hover:text-orange-600" fill="currentColor"  viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 
+                                2v12c0 1.1.9 2 2 
+                                2h16c1.1 0 2-.9 
+                                2-2V6c0-1.1-.9-2-2-2zm0 
+                                4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Youtube -->
+                        <a href="#" class="social-icon group text-white w-11 h-11 rounded-full flex items-center justify-center border border-gray-400 hover:border-orange-600">
+                            <svg class="w-5 h-5 text-gray-700 group-hover:text-orange-600" fill="currentColor"  viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="#" class="social-icon group text-white w-11 h-11 rounded-full flex items-center justify-center border border-gray-400 hover:border-orange-600">
+                            <svg class="w-5 h-5 text-gray-700 group-hover:text-orange-600" fill="currentColor"  viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
 </section>
-

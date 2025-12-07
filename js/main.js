@@ -31,7 +31,7 @@ async function loadComponent(componentName, targetId) {
 // Load semua components saat halaman dimuat
 document.addEventListener('DOMContentLoaded', async function() {
     // Load components secara berurutan
-    await loadComponent('header', 'header-component');
+    await loadComponent('navbar', 'navbar-component');
     await loadComponent('hero', 'hero-component');
     await loadComponent('about', 'about-component');
     await loadComponent('skills', 'skills-component');
@@ -45,64 +45,62 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 // Fungsi untuk inisialisasi setelah components dimuat
 function initializeComponents() {
-    // Smooth scroll untuk navigasi
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-                // Tutup mobile menu jika terbuka
-                if (navMenu && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
+        
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Scroll animation
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                navbar.classList.add('nav-hidden');
+                navbar.classList.remove('nav-visible');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('nav-hidden');
+                navbar.classList.add('nav-visible');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Active menu item on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
                 }
-            }
+            });
+
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
         });
-    });
 
-    // Mobile menu toggle (jika ada)
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
         });
-    }
-
-    // Active state untuk navigation saat scroll
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollY = window.pageYOffset;
-
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    });
-
-    // Form submission handler
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form berhasil dikirim! (Ini adalah demo)');
-            this.reset();
-        });
-    }
 
     console.log('✅ Semua components berhasil dimuat dan diinisialisasi!');
 }

@@ -1,0 +1,59 @@
+    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-11/12 max-w-5xl">
+        <div class="nav-container bg-white/95 backdrop-blur-md shadow-2xl rounded-full px-6 py-4 border border-gray-200">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 ml-3">
+                    <!-- <img src="./../assets/img/logo.png" alt="MixuCode Logo" class="logo-circle w-10 h-10 object-contain"> -->
+                    
+                    <span class="text-2xl font-bold text-gray-800 tracking-tight">
+                         Lazuardi <span class="text-orange-500">M.</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="menu-item active text-gray-700 hover:text-orange-500 font-medium">Home</a>
+                    <a href="#services" class="menu-item text-gray-700 hover:text-orange-500 font-medium">Services</a>
+                    <a href="#about" class="menu-item text-gray-700 hover:text-orange-500 font-medium">About</a>
+                    <a href="#projects" class="menu-item text-gray-700 hover:text-orange-500 font-medium">Projects</a>
+                    <a href="#blogs" class="menu-item text-gray-700 hover:text-orange-500 font-medium">Blogs</a>
+                    <a href="#testimonials" class="menu-item text-gray-700 hover:text-orange-500 font-medium">Testimonials</a>
+                </div>
+
+                <!-- Contact Button Desktop -->
+                <div class="hidden md:block">
+                    <button class="contact-btn bg-black text-white px-6 py-2.5 rounded-full hover:bg-gray-800 transition-all duration-300 font-medium flex items-center space-x-2">
+                        <span>Contact Me</span>
+                        <svg class="contact-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden">
+                <div class="pt-4 pb-2 space-y-3">
+                    <a href="#home" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">Home</a>
+                    <a href="#services" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">Services</a>
+                    <a href="#about" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">About</a>
+                    <a href="#projects" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">Projects</a>
+                    <a href="#blogs" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">Blogs</a>
+                    <a href="#testimonials" class="block text-gray-700 hover:text-orange-500 font-medium py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors">Testimonials</a>
+                    <button class="contact-btn w-full bg-black text-white px-6 py-2.5 rounded-full hover:bg-gray-800 transition-all duration-300 font-medium mt-2 flex items-center justify-center space-x-2">
+                        <span>Contact Me</span>
+                        <svg class="contact-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
