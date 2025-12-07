@@ -16,5 +16,13 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^7.2.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixudev/portofolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mixudev/portofolio/issues"
+  },
+  "homepage": "https://github.com/mixudev/portofolio#readme"
 }
