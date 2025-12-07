@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 function initializeComponents() {
     // Smooth scroll untuk navigasi
     const navLinks = document.querySelectorAll('a[href^="#"]');
+    const navMenu = document.querySelector('.nav-menu');
+    
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -54,19 +56,43 @@ function initializeComponents() {
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
+                // Tutup mobile menu jika terbuka
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
             }
         });
     });
 
     // Mobile menu toggle (jika ada)
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
     
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
     }
+
+    // Active state untuk navigation saat scroll
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 100;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
 
     // Form submission handler
     const contactForm = document.querySelector('#contact-form');
