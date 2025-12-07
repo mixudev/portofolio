@@ -1,12 +1,28 @@
-// Fungsi untuk load component
+// Load komponen saat build: gunakan import.meta.glob agar Vite
+// menyertakan file HTML komponen ke dalam output build.
+const componentsMap = import.meta.glob('../components/*.html', { as: 'raw', eager: true });
+
+function getComponentHtml(componentName) {
+    const key = `../components/${componentName}.html`;
+    return componentsMap[key] || null;
+}
+
 async function loadComponent(componentName, targetId) {
     try {
+        // Coba ambil dari map yang sudah di-bundle
+        const html = getComponentHtml(componentName);
+        if (html !== null) {
+            document.getElementById(targetId).innerHTML = html;
+            return;
+        }
+
+        // Fallback ke fetch (mis. saat struktur file berbeda)
         const response = await fetch(`components/${componentName}.html`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const html = await response.text();
-        document.getElementById(targetId).innerHTML = html;
+        const fetchedHtml = await response.text();
+        document.getElementById(targetId).innerHTML = fetchedHtml;
     } catch (error) {
         console.error(`Error loading ${componentName}:`, error);
     }
