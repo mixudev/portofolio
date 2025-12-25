@@ -1,0 +1,154 @@
+ <section class="py-16 px-4 sm:px-6 lg:px-8 min-h-screen mb-[70px]" id="contact">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12 justify-center w-full content-center flex flex-col items-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-5 h-[3px] bg-orange-500 rounded-full"></span>
+                    <p class="text-lg font-medium text-gray-900">My Portfolio</p>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+                    Let's Talk for <span class="text-orange-500 italic">Your Next Projects</span>
+                </h2>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Your Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-900 mb-2">
+                            Your Name <span class="text-orange-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="Ex. John Doe"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                            required
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-900 mb-2">
+                            Email <span class="text-orange-500">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="example@gmail.com"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-900 mb-2">
+                            Phone <span class="text-orange-500">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            placeholder="Enter Phone Number"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                            required
+                        >
+                    </div>
+
+                    <!-- I'm Interested in -->
+                    <div>
+                        <label for="interest" class="block text-sm font-medium text-gray-900 mb-2">
+                            I'm Interested in <span class="text-orange-500">*</span>
+                        </label>
+                        <select 
+                            id="interest"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all appearance-none bg-no-repeat bg-right pr-10"
+                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-size: 1.5em; background-position: right 0.7rem center;"
+                            required
+                        >
+                            <option value="">Select</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <div>
+                            <label for="budget" class="block text-sm font-medium text-gray-900 mb-2">
+                                Budget Range (USD) <span class="text-orange-500">*</span>
+                            </label>
+                            <select 
+                                id="budget"
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all appearance-none bg-no-repeat bg-right pr-10"
+                                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-size: 1.5em; background-position: right 0.7rem center;"
+                                required
+                            >
+                                <option value="">Select Range</option>
+                                <option value="1000-5000">$1,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-25000">$10,000 - $25,000</option>
+                                <option value="25000+">$25,000+</option>
+                            </select>
+                        </div>
+
+                        
+                        <div>
+                            <label for="country" class="block text-sm font-medium text-gray-900 mb-2">
+                                Country <span class="text-orange-500">*</span>
+                            </label>
+                            <select 
+                                id="country"
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all appearance-none bg-no-repeat bg-right pr-10"
+                                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-size: 1.5em; background-position: right 0.7rem center;"
+                                required
+                            >
+                                <option value="">Select Country</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="id">Indonesia</option>
+                                <option value="sg">Singapore</option>
+                                <option value="my">Malaysia</option>
+                                <option value="au">Australia</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div> 
+                -->
+
+                <!-- Your Message -->
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-900 mb-2">
+                        Your Message <span class="text-orange-500">*</span>
+                    </label>
+                    <textarea 
+                        id="message" 
+                        rows="6"
+                        placeholder="Enter here..."
+                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all resize-none"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button 
+                        type="submit"
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    >
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    

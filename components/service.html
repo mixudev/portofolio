@@ -1,4 +1,4 @@
-<section class="w-full max-w-6xl mx-auto px-6 py-12 md:py-16 mx-auto">
+<section id="services" class="w-full max-w-6xl mx-auto px-6 py-12 md:py-16 mx-auto">
   <!-- Header -->
   <div class="mb-8 md:mb-12">
     <p class="text-orange-500 text-sm md:text-base font-medium mb-2">— My Specialization</p>
@@ -12,16 +12,16 @@
   <!-- Services List -->
   <div class="space-y-4">
     <!-- Service 1 - UI/UX Design -->
-    <div class="bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
+    <div id="service-1" class="service-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
       <button 
         onclick="toggleService(1)"
         class="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-gray-100 transition-colors"
       >
         <div class="flex items-center gap-4 md:gap-16">
-          <span class="text-2xl md:text-3xl font-semibold text-gray-900">01.</span>
-          <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">UI/UX Design</h3>
+          <span class="service-number text-2xl md:text-3xl font-semibold text-gray-900">01.</span>
+          <h3 class="service-title text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">UI/UX Design</h3>
         </div>
-        <div class="flex-shrink-0">
+        <div class="arrow-container flex-shrink-0">
           <svg id="arrow-1" class="w-5 h-5 md:w-6 md:h-6 text-gray-900 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
@@ -35,7 +35,7 @@
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Prototyping</span>
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Usability Testing</span>
           </div>
-          <p class="text-gray-600 mb-6 leading-relaxed">
+          <p class="service-description text-gray-600 mb-6 leading-relaxed">
             Creating intuitive and engaging user experiences through research-driven design. I focus on understanding user needs and translating them into beautiful, functional interfaces.
           </p>
           <div class="rounded-xl overflow-hidden">
@@ -45,23 +45,23 @@
       </div>
     </div>
 
-    <!-- Service 2 - Application Design (Expanded) -->
-    <div class="bg-black rounded-2xl overflow-hidden">
+    <!-- Service 2 - Application Design (Default Active) -->
+    <div id="service-2" class="service-item bg-black rounded-2xl overflow-hidden transition-all duration-500 ease-in-out">
       <button 
         onclick="toggleService(2)"
-        class="w-full flex items-center justify-between p-6 md:p-8 text-left"
+        class="w-full flex items-center justify-between p-6 md:p-8 text-left transition-colors duration-500"
       >
         <div class="flex items-center gap-4 md:gap-16">
-          <span class="text-2xl md:text-3xl font-semibold text-white">02.</span>
-          <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold text-white">Application Design</h3>
+          <span class="service-number text-2xl md:text-3xl font-semibold text-white transition-colors duration-500">02.</span>
+          <h3 class="service-title text-xl md:text-2xl lg:text-3xl font-semibold text-white transition-colors duration-500">Application Design</h3>
         </div>
-        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-full flex items-center justify-center">
-          <svg id="arrow-2" class="w-5 h-5 md:w-6 md:h-6 text-white transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="arrow-container flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-full flex items-center justify-center transition-all duration-500">
+          <svg id="arrow-2" class="w-5 h-5 md:w-6 md:h-6 text-white transition-all duration-500 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </div>
       </button>
-      <div id="content-2" class="block">
+      <div id="content-2" class="block animate-fadeIn">
         <div class="px-6 md:px-8 pb-6 md:pb-8">
           <div class="flex flex-wrap gap-2 md:gap-3 mb-4">
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Cross-Platform App Design</span>
@@ -69,7 +69,7 @@
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Wireframing and Prototyping</span>
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Custom App Theme Design</span>
           </div>
-          <p class="text-gray-400 mb-6 leading-relaxed">
+          <p class="service-description text-gray-600 mb-6 leading-relaxed">
             Designing scalable and performant applications for multiple platforms. From wireframes to high-fidelity prototypes, I create cohesive experiences across all devices.
           </p>
           <div class="rounded-xl overflow-hidden">
@@ -80,16 +80,16 @@
     </div>
 
     <!-- Service 3 - Website Design -->
-    <div class="bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
+    <div id="service-3" class="service-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
       <button 
         onclick="toggleService(3)"
         class="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-gray-100 transition-colors"
       >
         <div class="flex items-center gap-4 md:gap-16">
-          <span class="text-2xl md:text-3xl font-semibold text-gray-900">03.</span>
-          <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Website Design</h3>
+          <span class="service-number text-2xl md:text-3xl font-semibold text-gray-900">03.</span>
+          <h3 class="service-title text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Website Design</h3>
         </div>
-        <div class="flex-shrink-0">
+        <div class="arrow-container flex-shrink-0">
           <svg id="arrow-3" class="w-5 h-5 md:w-6 md:h-6 text-gray-900 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
@@ -103,7 +103,7 @@
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">E-commerce</span>
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">CMS Integration</span>
           </div>
-          <p class="text-gray-600 mb-6 leading-relaxed">
+          <p class="service-description text-gray-600 mb-6 leading-relaxed">
             Building modern, responsive websites that convert visitors into customers. I combine aesthetics with functionality to create memorable web experiences.
           </p>
           <div class="rounded-xl overflow-hidden">
@@ -114,16 +114,16 @@
     </div>
 
     <!-- Service 4 - Brand Identity -->
-    <div class="bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
+    <div id="service-4" class="service-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300">
       <button 
         onclick="toggleService(4)"
         class="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-gray-100 transition-colors"
       >
         <div class="flex items-center gap-4 md:gap-16">
-          <span class="text-2xl md:text-3xl font-semibold text-gray-900">04.</span>
-          <h3 class="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Brand Identity</h3>
+          <span class="service-number text-2xl md:text-3xl font-semibold text-gray-900">04.</span>
+          <h3 class="service-title text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Brand Identity</h3>
         </div>
-        <div class="flex-shrink-0">
+        <div class="arrow-container flex-shrink-0">
           <svg id="arrow-4" class="w-5 h-5 md:w-6 md:h-6 text-gray-900 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
@@ -137,7 +137,7 @@
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Visual Identity</span>
             <span class="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">Marketing Materials</span>
           </div>
-          <p class="text-gray-600 mb-6 leading-relaxed">
+          <p class="service-description text-gray-600 mb-6 leading-relaxed">
             Crafting unique brand identities that resonate with your target audience. From logo design to comprehensive brand guidelines, I help businesses stand out.
           </p>
           <div class="rounded-xl overflow-hidden">
@@ -148,4 +148,3 @@
     </div>
   </div>
 </section>
-

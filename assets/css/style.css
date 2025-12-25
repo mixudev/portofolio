@@ -1,16 +1,32 @@
-.nav-hidden {
-    transform: translateY(-150px);
-    opacity: 0;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    transition: 
+        opacity 0.45s ease,
+        transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+        filter 0.45s ease;
+    will-change: opacity, transform, filter;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-visible {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    visibility: visible;
+    pointer-events: auto;
 }
 
-nav {
-    transition: all 0.3s ease-in-out;
+.nav-hidden {
+    opacity: 0;
+    transform: translateY(-40px);
+    filter: blur(6px);
+    visibility: hidden;
+    pointer-events: none;
 }
+
 
 .menu-item {
     position: relative;
@@ -97,6 +113,6 @@ nav {
 
 @media (max-width: 768px) {
     .nav-container {
-        border-radius: 20px !important;
+        border-radius: 0 10px 0 10px !important;
     }
 }

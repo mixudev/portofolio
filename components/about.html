@@ -1,8 +1,89 @@
 
-    <section id="about" class="h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-orange-50">
-        <h2 class="text-4xl font-bold text-gray-800">About Section</h2>
-    </section>
 
-    <section id="projects" class="h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 to-red-50">
-        <h2 class="text-4xl font-bold text-gray-800">Projects Section</h2>
+<section id="about" class="w-full mx-auto py-8 md:py-12 lg:py-16 min-h-screen flex items-center">
+
+        <div class="  min-h-[80vh] py-10 px-8 md:px-12 lg:px-16 w-full items-center content-center">
+            <div class="max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mx-auto ">
+                <!-- Left Side - Image -->
+                <div class="relative flex justify-center lg:justify-start">
+                    <!-- Orange Circle Background -->
+                    <div class="relative">
+                        <div class="w-72 h-72 md:w-96 md:h-[500px] bg-orange-500 rounded-t-full"></div>
+
+                        <!-- Profile Image -->
+                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-80 md:w-80 md:h-96 overflow-hidden">
+                            <img src="/images/profile.jpg" alt="." class="w-full h-full object-cover rounded-3xl shadow-lg">
+                        </div>
+
+                        <!-- Customer Badge -->
+                        <div class="absolute top-8 -left-4 bg-white rounded-b-2xl rounded-t-[45%] shadow-lg p-3 flex flex-col text-center items-center gap-3 ">
+                            <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Total Project</p>
+                                <p class="text-lg font-bold text-gray-800">10+</p>
+                            </div>
+                        </div>
+
+                        <!-- Certified Badge -->
+                        <!-- <div class="absolute bottom-4 left-4 bg-white rounded-full shadow-lg px-4 py-2 flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-800">Certified Product Designer</span>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Right Side - Content -->
+                <div class="space-y-6">
+                    <!-- Header -->
+                    <div>
+                        <p class="text-orange-500 font-medium mb-2 flex items-center gap-2">
+                            <span class="w-8 h-0.5 bg-orange-500"></span>
+                            About Me
+                        </p>
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                            Who is <span class="text-orange-500">Lazuardi ?</span>
+                        </h1>
+                        <p class="text-gray-600 leading-relaxed">
+                            Hello! I'm Lazuardi, a passionate and experienced product designer with over 16 years in the industry.
+                            I've had the privilege of working on more than 750 projects across 25 different industries, 
+                            helping businesses create user-centric designs that drive success. My expertise lies in crafting intuitive
+                            interfaces and engaging user experiences that not only meet but exceed client expectations.
+                            Let's work together to bring your vision to life!
+                        </p>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 py-6">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-1">750+</h3>
+                            <p class="text-sm text-gray-600">Project Completed</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-1">25+</h3>
+                            <p class="text-sm text-gray-600">Industry Covered</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-1">16+</h3>
+                            <p class="text-sm text-gray-600">Years of Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <!-- Button download cv -->
+                        <a href="/files/Lazuardi_Resume.pdf" download class="inline-block px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 transition duration-300 text-center">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>

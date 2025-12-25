@@ -9,6 +9,7 @@ const componentsList = [
     'hero',
     'service',
     'about',
+    'favorit-tools',
     'skills',
     'projects',
     'contact',
@@ -59,10 +60,10 @@ import { initializeServices } from './../assets/js/services.js';
 
 function initializeComponents() {
     let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
+    const navbar        = document.getElementById('navbar');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuItems = document.querySelectorAll('.menu-item');
+    const mobileMenu    = document.getElementById('mobile-menu');
+    const menuItems     = document.querySelectorAll('.menu-item');
 
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -87,7 +88,7 @@ function initializeComponents() {
         const sections = document.querySelectorAll('section');
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTop    = section.offsetTop;
             const sectionHeight = section.clientHeight;
             if (window.pageYOffset >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
